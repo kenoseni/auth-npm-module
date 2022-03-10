@@ -18,7 +18,7 @@ export const errorHandler = (
   // if (err instanceof DatabaseConnectionError) {
   //   res.status(err.statusCode).json({ errors: err.serializeErrors() });
   // }
-
+  console.error(err);
   res.status(500).json({
     errors: [{ message: "Something went wrong" }],
   });
